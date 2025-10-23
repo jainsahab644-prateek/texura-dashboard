@@ -24,7 +24,10 @@ const connectDB = async () => {
 connectDB(); // Call the function to connect to the DB
 
 // 4. Setup Middleware
-app.use(cors());
+app.use(cors({
+  origin: ["https://earnest-cajeta-c39a51.netlify.app"], // your Netlify site
+  credentials: true
+}));
 app.use(express.json());
 
 // 5. Define Routes
