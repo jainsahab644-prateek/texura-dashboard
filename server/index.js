@@ -26,10 +26,7 @@ connectDB(); // Call the function to connect to the DB
 // 4. Setup Middleware
 
 
-app.use(cors({
-  origin: ["https://unique-monstera-67bb3f.netlify.app"],
-  credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 
